@@ -1,8 +1,10 @@
--main Main
+-main TextEditor
+#-main Main
 -cp src
--java output 
--java-lib lib/swt/swt.jar
+--jvm output/Main.jar
+-java-lib lib/swt-osx/swt.jar
 -lib msignal
--lib haxe-concurrent
--cmd java -XX:+UseG1GC -XX:TieredStopAtLevel=1  --module-path lib/swt --add-modules=swt -jar output/Main.jar 
+-lib compiletime
+-lib format
+-cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 -XstartOnFirstThread --module-path lib/swt-osx --add-modules=swt -jar output/Main.jar
 #-cmd /opt/graalvm-ce-1.0.0-rc10/jre/bin/java -jar output/Main.jar 
