@@ -1,0 +1,43 @@
+<project>
+    <!-- model version - always 4.0.0 for Maven 2.x POMs -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- project coordinates - values which uniquely identify this project -->
+    <groupId>com.mygroup</groupId>
+    <artifactId>my-swt-project</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+
+
+    <repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
+
+    <!-- library dependencies -->
+    <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.cocoa.macosx.x86_64 -->
+        <dependency>
+            <groupId>org.eclipse.platform</groupId>
+            <artifactId>org.eclipse.swt</artifactId>
+            <version>3.115.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.eclipse.swtchart</groupId>
+            <artifactId>org.eclipse.swtchart.extensions</artifactId>
+            <version>d61f136</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.eclipse.swtchart</groupId>
+            <artifactId>org.eclipse.swtchart</artifactId>
+            <version>d61f136</version>
+        </dependency>
+
+    </dependencies>
+</project>

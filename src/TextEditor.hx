@@ -104,8 +104,6 @@ class TextEditor {
         spec.grabExcessVerticalSpace = true;
         text.setLayoutData(spec);
         text.addLineStyleListener(new LineStyleCallback(event -> {
-            // trace("Offset:" + event.lineOffset);
-            // trace("Line count: " + text.getLineCount());
             event.bulletIndex = text.getLineAtOffset(event.lineOffset);
             var style = new StyleRange();
             lineNumberWidth = (text.getLineCount() + 1 < 100 ? 3 : Std.string(text.getLineCount()+1).length) * 13;
