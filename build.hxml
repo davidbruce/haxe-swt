@@ -3,16 +3,26 @@
 #-main Main
 -cp src
 --jvm output/Main.jar
-#--java output
-#-java-lib lib/swt.jar
-#-java-lib lib/swt-osx/swt.jar
-#-java-lib lib/swtchart/swtchart.jar
--java-lib jars/
+# --java output
+-java-lib jars
 -lib msignal
 -lib compiletime
 -lib format
+# OSX requires -XstartOnFirstThread for SWT applications
 #-cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 -XstartOnFirstThread --module-path "output/lib" --add-modules="org.eclipse.swt,org.eclipse.swtchart" -jar output/Main.jar
--cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 -XstartOnFirstThread --module-path "output/lib" --add-modules="org.eclipse.swt,org.eclipse.swtchart" -jar output/Main.jar
+-cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 --module-path "output/lib" --add-modules="org.eclipse.swt,org.eclipse.swtchart" -jar output/Main.jar
+
+#Jdk 8 and lower:
+-cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 -cp output/lib -jar output/Main.jar
+
+#--java output
+# -cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 --module-path "output/lib" --add-modules="org.eclipse.swt,org.eclipse.swtchart" -jar output/LineChartExample.jar
+
 #-cmd /opt/graalvm-ce-1.0.0-rc10/jre/bin/java -jar output/Main.jar 
-# need to pass this to mvn command to pull proper platform jar -Dosgi.platform=gtk.linux.x86_64
+# mvn dependency:copy-dependencies -DoutputDirectory=jars
+# need to pass this to mvn command to pull proper platform jar
+# -Dosgi.platform=gtk.linux.x86_64
 # -Dosgi.platform=cocoa.macosx.x86_64
+# -Dosgi.platform=win32.win32.x86_64
+# windows requires quotes around properties that contain periods:
+# mvn dependency:copy-dependencies -DoutputDirectory=jars -D"osgi.platform"="win32.win32.x86_64" 
