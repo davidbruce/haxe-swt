@@ -1,5 +1,7 @@
+#-main Snippet38
+-main Snippet77
 #-main TextEditor
--main LineChartExample
+#-main LineChartExample
 #-main Main
 -cp src
 --jvm output/Main.jar
@@ -10,10 +12,10 @@
 -lib format
 # OSX requires -XstartOnFirstThread for SWT applications
 #-cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 -XstartOnFirstThread --module-path "output/lib" --add-modules="org.eclipse.swt,org.eclipse.swtchart" -jar output/Main.jar
--cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 --module-path "output/lib" --add-modules="org.eclipse.swt,org.eclipse.swtchart" -jar output/Main.jar
+-cmd java -XX:+CompactStrings --module-path "output/lib" --add-modules="org.eclipse.swt,org.eclipse.swtchart" -jar output/Main.jar
 
 #Jdk 8 and lower:
--cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 -cp output/lib -jar output/Main.jar
+#-cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 -cp output/lib -jar output/Main.jar
 
 #--java output
 # -cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 --module-path "output/lib" --add-modules="org.eclipse.swt,org.eclipse.swtchart" -jar output/LineChartExample.jar

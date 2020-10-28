@@ -1,0 +1,7 @@
+{
+	"name":              "haxe-swt",
+	"license":           "MIT",
+	"description":       "Eclipse SWT for Haxe",
+	"version":           "0.0.1",
+	"contributors":      ["davidbruce"]
+}

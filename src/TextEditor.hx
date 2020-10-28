@@ -225,14 +225,14 @@ class Images {
 
     public function loadAll(display: Display) {
         // ImageHelper.test(display, "images/format-bold.png");
-        Bold =          new Image(display, ImageHelper.load("images/format-bold.png"));
-        Italic =        new Image(display, ImageHelper.load("images/format-italic.png"));
-        Underline =     new Image(display, ImageHelper.load("images/format-underline.png"));
-        Strikeout =     new Image(display, ImageHelper.load("images/format-strikethrough-variant.png"));
-        // // Red =       new Image(display, "red");
-        // // Green =     new Image(display, "green");
-        // // Blue =      new Image(display, "blue");
-        Erase =         new Image(display, ImageHelper.load("images/eraser.png"));
+        // Bold =          new Image(display, ImageHelper.load("images/format-bold.png"));
+        // Italic =        new Image(display, ImageHelper.load("images/format-italic.png"));
+        // Underline =     new Image(display, ImageHelper.load("images/format-underline.png"));
+        // Strikeout =     new Image(display, ImageHelper.load("images/format-strikethrough-variant.png"));
+        // // // Red =       new Image(display, "red");
+        // // // Green =     new Image(display, "green");
+        // // // Blue =      new Image(display, "blue");
+        // Erase =         new Image(display, ImageHelper.load("images/eraser.png"));
 
         // Bitmaps = [Bold, Italic, Underline,
         //               Strikeout, Red, Green,
