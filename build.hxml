@@ -1,18 +1,19 @@
 #-main Snippet38
--main Snippet77
+#-main Snippet77
 #-main TextEditor
 #-main LineChartExample
-#-main Main
--cp src
+-main swt.Main
+-cp src/
 --jvm output/Main.jar
 # --java output
--java-lib jars
+-java-lib src/swt/_internal/jars/common
+-java-lib src/swt/_internal/jars/win
 -lib msignal
 -lib compiletime
 -lib format
 # OSX requires -XstartOnFirstThread for SWT applications
 #-cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 -XstartOnFirstThread --module-path "output/lib" --add-modules="org.eclipse.swt,org.eclipse.swtchart" -jar output/Main.jar
--cmd java -XX:+CompactStrings --module-path "output/lib" --add-modules="org.eclipse.swt,org.eclipse.swtchart" -jar output/Main.jar
+-cmd java.exe -XX:+CompactStrings --module-path "output/lib" --add-modules="org.eclipse.swt,org.eclipse.swtchart" -jar output/Main.jar
 
 #Jdk 8 and lower:
 #-cmd java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:TieredStopAtLevel=1 -cp output/lib -jar output/Main.jar

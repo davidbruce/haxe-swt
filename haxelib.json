@@ -3,5 +3,6 @@
 	"license":           "MIT",
 	"description":       "Eclipse SWT for Haxe",
 	"version":           "0.0.1",
-	"contributors":      ["davidbruce"]
+	"contributors":      ["davidbruce"],
+	"classPath": "src/"
 }

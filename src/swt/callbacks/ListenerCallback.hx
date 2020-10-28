@@ -1,4 +1,4 @@
-package ;
+package swt.callbacks;
 
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Event;
