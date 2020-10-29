@@ -1,14 +1,19 @@
-package ;
+package swt.callbacks;
 
 import org.eclipse.swt.events.PaintListener;
 import org.eclipse.swt.events.PaintEvent;
 
+typedef Callback = PaintEvent -> Void;
+
 class PaintCallback implements PaintListener {
-    var callback: PaintEvent->Void;
-    public function new(callback:PaintEvent->Void) {
-        this.callback = callback;
+    var _paintControl: Callback;
+    public function new(callbacks: { ?paintControl: Callback }) {
+        _paintControl: callbacks.paintControl;
     }
-    public function paintControl(paintEvent:PaintEvent):Void {
-        callback(paintEvent);
+    public function paintControl(event: Callback): Void {
+        _paintControl(event);
+    }
+    public function setPaintControl(callback: Callback): Void {
+        _paintControl = callback;
     }
 } 

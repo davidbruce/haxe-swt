@@ -1,4 +1,4 @@
-package callbacks;
+package swt.callbacks;
 
 import org.eclipse.swt.custom.LineStyleListener;
 import org.eclipse.swt.custom.LineStyleEvent;
