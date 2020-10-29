@@ -14,7 +14,9 @@ package swt.callbacks;
 
 import org.eclipse.swt.events.ControlListener;
 import org.eclipse.swt.events.ControlEvent;
+
 typedef Callback = ControlEvent -> Void;
+
 class ControlCallback implements ControlListener {
     var _controlMoved: Callback;
     var _controlResized: Callback;
