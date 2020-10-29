@@ -1,4 +1,4 @@
-package callbacks;
+package swt.callbacks;
 
 import org.eclipse.swt.events.ControlListener;
 import org.eclipse.swt.events.ControlEvent;
