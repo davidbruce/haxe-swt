@@ -11,10 +11,10 @@ class ExtraParams {
         }
         
         if (Context.defined("windows")) {
-            Compiler.addNativeLib(getPath() + "/jars/win");
+            Compiler.addNativeLib(getPath() + "/jars/windows");
         }
         else if (Context.defined("linux")) {
-            Compiler.addNativeLib(getPath() + "/jars/gtk");
+            Compiler.addNativeLib(getPath() + "/jars/linux");
         }
         else if (Context.defined("osx")) {
             Compiler.addNativeLib(getPath() + "/jars/osx");

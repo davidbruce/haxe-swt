@@ -4,5 +4,5 @@
 	"description":       "Eclipse SWT for Haxe",
 	"version":           "0.0.1",
 	"contributors":      ["davidbruce"],
-	"classPath": "src/"
+	"classPath":         "src/"
 }
